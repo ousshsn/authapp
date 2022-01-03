@@ -8,5 +8,5 @@ const users = new UsersController();
 
 usersRouter.post("/signup", cleanBody, users.signup);
 usersRouter.patch("/login", cleanBody, users.login);
-usersRouter.patch("/logout", validateToken, users.logout);
+//usersRouter.patch("/logout", validateToken, users.logout);
 export default usersRouter;

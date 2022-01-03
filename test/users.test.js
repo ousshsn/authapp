@@ -82,19 +82,19 @@ describe("POST users", () => {
         .catch((err) => done(err));
     });
   
-    it("should log out users with valid token", (done) => {
-      request(app)
-        .patch("/users/logout")
-        .set({
-          Authorization: tempToken,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.message).to.be.eql("User logged out");
-          done();
-        })
-        .catch((err) => done(err));
-    });
+    // it("should log out users with valid token", (done) => {
+    //   request(app)
+    //     .patch("/users/logout")
+    //     .set({
+    //       Authorization: tempToken,
+    //     })
+    //     .expect(200)
+    //     .then((res) => {
+    //       expect(res.body.message).to.be.eql("User logged out");
+    //       done();
+    //     })
+    //     .catch((err) => done(err));
+    // });
   });
 
   after(async () => {

@@ -84,28 +84,28 @@ class UsersController {
     }
   }
 
-  async logout(req, res) {
-    try {
-      const { username } = req.decoded;
+  // async logout(req, res) {
+  //   try {
+  //     const { username } = req.decoded;
 
-      let user = await User.findOne({ username });
+  //     let user = await User.findOne({ username });
 
-      user.accessToken = "";
+  //     user.accessToken = "";
 
-      await user.save();
+  //     await user.save();
 
-      return res.status(200).json({
-        success: true,
-        message: "User logged out",
-      });
-    } catch (error) {
-      console.error(error);
-      return res.status(500).json({
-        error: true,
-        message: error,
-      });
-    }
-  }
+  //     return res.status(200).json({
+  //       success: true,
+  //       message: "User logged out",
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //     return res.status(500).json({
+  //       error: true,
+  //       message: error,
+  //     });
+  //   }
+  // }
 
 }
 
